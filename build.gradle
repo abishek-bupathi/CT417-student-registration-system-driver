@@ -7,12 +7,16 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    implementation 'com.github.abishek-bupathi:CT417-student-registration-system:v1.0'
 }
+
 
 test {
     useJUnitPlatform()
