@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class StudentRegistrationDriver {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
 
         ArrayList<Course> courses = create_courses(); // Creating a list of courses
         ArrayList<Module> modules = create_modules(); // Creating a list of modules
@@ -42,10 +42,10 @@ public class StudentRegistrationDriver {
     public static ArrayList<Course> create_courses(){
 
         ArrayList<Course> courses = new ArrayList<>();
-        String course_names[] = {"IT", "ECE", "EEE"};
+        String[] course_names = {"IT", "ECE", "EEE"};
 
-        for (int i = 0; i < course_names.length; i++){
-            courses.add(new Course(course_names[i], DateTime.parse("2021-09-06"), DateTime.parse("2022-05-30")));
+        for (String course_name : course_names) {
+            courses.add(new Course(course_name, DateTime.parse("2021-09-06"), DateTime.parse("2022-05-30")));
         }
         return courses;
     }
@@ -53,10 +53,10 @@ public class StudentRegistrationDriver {
     public static ArrayList<Module> create_modules(){
 
         ArrayList<Module> modules = new ArrayList<>();
-        String module_names[] = {"CT417", "MM123", "EE342", "EM444", "EE431", "CS450", "ME427", "EC411", "EE420"};
+        String[] module_names = {"CT417", "MM123", "EE342", "EM444", "EE431", "CS450", "ME427", "EC411", "EE420"};
 
-        for (int i = 0; i < module_names.length; i++){
-            modules.add(new Module(module_names[i]));
+        for (String module_name : module_names) {
+            modules.add(new Module(module_name));
         }
 
         return modules;
@@ -65,10 +65,10 @@ public class StudentRegistrationDriver {
     public static ArrayList<Student> create_students(ArrayList<Module> module_set_1, ArrayList<Module> module_set_2, ArrayList<Module> module_set_3, ArrayList<Course> courses){
 
         ArrayList<Student> students = new ArrayList<>();
-        String student_names[] = {"Abishek", "Patrick", "Sam", "Rohan", "Jack", "Emanuel", "Daniel", "Emma", "Mathew", "Ramya", "Rosy", "Bruce"};
-        int student_ages[] = {20, 20, 21, 19, 20, 20, 19, 21, 21, 21, 20, 20};
-        String student_dobs[] = {"08/12/2000", "01/1/2000", "05/10/2001", "12/11/2000", "12/1/2001", "09/2/2001", "05/10/1999", "02/5/1999", "07/12/1999", "31/7/1999", "02/11/2000", "26/10/2000"};
-        int student_ids[] = {18280072, 12321321, 21345287, 23891764, 23143563, 20012327, 78787878, 98989898, 13121322, 21321312, 31232111, 21213212};
+        String[] student_names = {"Abishek", "Patrick", "Sam", "Rohan", "Jack", "Emanuel", "Daniel", "Emma", "Mathew", "Ramya", "Rosy", "Bruce"};
+        int[] student_ages = {20, 20, 21, 19, 20, 20, 19, 21, 21, 21, 20, 20};
+        String[] student_dobs = {"08/12/2000", "01/1/2000", "05/10/2001", "12/11/2000", "12/1/2001", "09/2/2001", "05/10/1999", "02/5/1999", "07/12/1999", "31/7/1999", "02/11/2000", "26/10/2000"};
+        int[] student_ids = {18280072, 12321321, 21345287, 23891764, 23143563, 20012327, 78787878, 98989898, 13121322, 21321312, 31232111, 21213212};
 
         for(int i = 0; i < (student_names.length ); i += 3 ){
             students.add(new Student(student_names[i], student_ages[i], student_dobs[i], student_ids[i], courses.get(0), module_set_1));
@@ -88,9 +88,9 @@ public class StudentRegistrationDriver {
             System.out.println("Student DOB   : " + student.getDob());
             System.out.println("Student ID    : " + student.getId());
             System.out.println("Course taken  : " + student.getCourse().getCourse_name());
-            System.out.println("Modules taken : " + student.getModules().get(0).getModule_name());
+            System.out.println("Modules taken : " + student.getModules().get(0).getModuleName());
             for(int i=1; i < student.getModules().size(); i++) {
-                System.out.println("                " + student.getModules().get(i).getModule_name());
+                System.out.println("                " + student.getModules().get(i).getModuleName());
             }
             System.out.println("--------------------------");
         }
@@ -102,9 +102,9 @@ public class StudentRegistrationDriver {
             System.out.println("Course Name : " + course.getCourse_name());
             System.out.println("Start Date  : " + course.getAcademic_start_date().toString("dd/MM/yy"));
             System.out.println("End Date    : " + course.getAcademic_end_date().toString("dd/MM/yy"));
-            System.out.println("Modules     : " + course.getModules().get(0).getModule_name());
+            System.out.println("Modules     : " + course.getModules().get(0).getModuleName());
             for(int i=1; i < course.getModules().size(); i++) {
-                System.out.println("              " + course.getModules().get(i).getModule_name());
+                System.out.println("              " + course.getModules().get(i).getModuleName());
             }
             System.out.println("-----------------------");
         }
