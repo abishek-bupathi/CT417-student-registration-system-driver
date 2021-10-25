@@ -11,7 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                bat './gradlew test'
+               // bat './gradlew test'
             }
         }
         stage('Deploy') {
