@@ -16,6 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                bat './gradlew assemble'
                 echo 'Deploying....'
             }
         }
