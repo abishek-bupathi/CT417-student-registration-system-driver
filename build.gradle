@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
 }
 
 group 'org.example'
@@ -17,6 +18,7 @@ dependencies {
     implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-jodatime', version: '5.7.0.RELEASE'
     implementation 'com.github.abishek-bupathi:CT417-student-registration-system:v1.3'
 }
+
 
 
 test {
