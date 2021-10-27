@@ -20,15 +20,15 @@ public class StudentRegistrationDriver {
 
         // Adding 1st set of modules to 1st course
         for(Module module: module_set_1) {
-            courses.get(0).addModules(module);
+            courses.get(0).addModule(module);
         }
         // Adding 2nd set of modules to 2nd course
         for(Module module: module_set_2) {
-            courses.get(1).addModules(module);
+            courses.get(1).addModule(module);
         }
         // Adding 3rd set of modules to 3rd course
         for(Module module: module_set_3) {
-            courses.get(2).addModules(module);
+            courses.get(2).addModule(module);
         }
 
         // Creating a list of student using the sets of modules and courses
