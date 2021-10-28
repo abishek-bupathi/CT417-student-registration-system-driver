@@ -19,8 +19,14 @@ dependencies {
     implementation 'com.github.abishek-bupathi:CT417-student-registration-system:v1.3'
 }
 
-
-
 test {
     useJUnitPlatform()
+}
+
+task deploy (dependsOn: war){
+    copy {
+        from war.getArchiveFile()
+        into "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"
+        include "*.war"
+    }
 }
