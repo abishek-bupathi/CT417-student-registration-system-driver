@@ -17,6 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat './gradlew war'
+                bat './gradlew appRun'
                 echo 'Deploying....'
             }
         }
