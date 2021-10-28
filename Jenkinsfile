@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 bat './gradlew deploy'
-                start 'C:\Program Files\Apache Software Foundation\Tomcat 8.5\bin\startup.bat'
+                bat 'start cmd.exe /c C:\Program Files\Apache Software Foundation\Tomcat 8.5\bin\startup.bat'
 
             }
         }
