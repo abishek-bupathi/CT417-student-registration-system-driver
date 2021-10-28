@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 bat  './gradlew clean build'
+                bat './gradlew war'
             }
         }
         stage('Test') {
@@ -15,14 +16,8 @@ pipeline {
             }
         }
         stage('Deploy') {
-            task deployToTomcat(type: Copy) {
-                from "build/libs"
-                into "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps"
-                include "*.war"
-            }
             steps {
-                bat './gradlew war'
-                bat './gradlew deploy'
+                bat './gradlew tomcatRun'
                 echo 'Deploying....'
             }
         }
