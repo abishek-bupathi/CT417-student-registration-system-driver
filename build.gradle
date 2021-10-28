@@ -23,7 +23,7 @@ test {
     useJUnitPlatform()
 }
 
-task deploy (dependsOn: war){
+task deploy (dependsOn: test){
     copy {
         from war.getArchiveFile()
         into "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"
