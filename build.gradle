@@ -22,11 +22,3 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-
-task deploy (dependsOn: test){
-    copy {
-        from war.getArchiveFile()
-        into "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"
-        include "*.war"
-    }
-}
