@@ -18,8 +18,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                bat "start cmd.exe /c copy \\build\\libs\\*.war C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps\\"
-                bat 'start cmd.exe /c C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\bin\\startup.bat'
+                bat "copy build\\libs\\*.war C:\\Program\ Files\\Apache\ Software\ Foundation\\Tomcat\ 8.5\\webapps\\"
+                bat 'C:\\Program Files\\Apache\ Software\ Foundation\\Tomcat\ 8.5\\bin\\startup.bat'
             }
         }
     }
