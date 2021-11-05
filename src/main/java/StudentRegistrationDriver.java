@@ -100,8 +100,8 @@ public class StudentRegistrationDriver {
         System.out.println("\n------- Courses -------");
         for (Course course: courses){
             System.out.println("Course Name : " + course.getCourse_name());
-            System.out.println("Start Date  : " + course.getAcademic_start_date().toString("dd/MM/yy"));
-            System.out.println("End Date    : " + course.getAcademic_end_date().toString("dd/MM/yy"));
+            System.out.println("Start Date  : " + course.getAcademicStartDate().toString("dd/MM/yy"));
+            System.out.println("End Date    : " + course.getAcademicEndDate().toString("dd/MM/yy"));
             System.out.println("Modules     : " + course.getModules().get(0).getModuleName());
             for(int i=1; i < course.getModules().size(); i++) {
                 System.out.println("              " + course.getModules().get(i).getModuleName());

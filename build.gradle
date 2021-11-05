@@ -16,7 +16,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
     implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-jodatime', version: '5.7.0.RELEASE'
-    implementation 'com.github.abishek-bupathi:CT417-student-registration-system:v1.3'
+    implementation 'com.github.abishek-bupathi:CT417-student-registration-system:v1.4'
 }
 
 test {
